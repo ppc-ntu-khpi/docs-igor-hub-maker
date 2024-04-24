@@ -1,6 +1,15 @@
 package domain;
+
+/**
+ * Клас, що представляє робітника.
+ */
 public class Employee {
 
+    /**
+     * Перевизначений метод toString() для виведення інформації про робітника.
+     *
+     * @return рядок, що описує робітника
+     */
     @Override
     public String toString() {
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
@@ -14,6 +23,14 @@ public class Employee {
 
    // private static int employeesCount = 0;
 
+    /**
+    * Конструктор класу.
+    *
+    * @param name     ім'я робітника
+    * @param jobTitle посада робітника
+    * @param level    рівень робітника
+    * @param dept     відділ, до якого він належить
+    */
     public Employee(String name, String jobTitle, int level, String dept) {
         this();
         setName(name);
@@ -30,6 +47,9 @@ public class Employee {
         this.dept = dept;
     }
 
+    /**
+    * Конструктор класу.
+    */
     public Employee() {
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
@@ -37,18 +57,38 @@ public class Employee {
 //        }
     }
 
+    /**
+     * сетер посади робітника.
+     *
+     * @param job посада робітника
+     */
     public void setJobTitle(String job) {
         jobTitle = job;
     }
 
+    /**
+     * гетер посади робітника.
+     *
+     * @return посада робітника
+     */
     public String getJobTitle() {
         return jobTitle;
     }
 
+    /**
+     * гетер імені робітника.
+     *
+     * @return імʼя робітника
+     */
     public String getName() {
         return name;
     }
 
+    /**
+    * сетер рівня робітника.
+    *
+    * @param level рівень робітника, может бути від 1 до 3
+    */
     public void setLevel(int level) {
         switch (level) {
             case 1:
@@ -61,18 +101,38 @@ public class Employee {
         }
     }
 
+    /**
+     * гетер рівня робітника.
+     *
+     * @return рівень робітника, від 1 до 3
+     */
     public int getLevel() {
         return level;
     }
 
+    /**
+     * гетер відділу робітника.
+     *
+     * @return відділ робітника
+     */
     public String getDept() {
         return dept;
     }
 
+    /**
+     * сетер відділу робітника.
+     *
+     * @param dept відділ робітника
+     */
     public void setDept(String dept) {
         this.dept = dept;
     }
 
+    /**
+     * сетер імені робітника.
+     *
+     * @param name імʼя робітника
+     */
     public void setName(String name) {
 //        boolean correctName = true;
 //        for (int i = 0; i < name.length(); i++) {
